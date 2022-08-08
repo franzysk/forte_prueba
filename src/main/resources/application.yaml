@@ -21,3 +21,7 @@ spring:
   sql:
     init:
       platform: mysql
+
+server:
+  address: 127.0.0.1
+  port: 10001

@@ -21,13 +21,11 @@ public class Contract extends CommonEntity {
     private long contractId;
 
     @Column(name = "EmployeeId",
-            nullable = false,
-            unique = true)
+            nullable = false)
     private int employeeId;
 
     @Column(name = "ContractTypeId",
-            nullable = false,
-            unique = true)
+            nullable = false)
     private int contractTypeId;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
