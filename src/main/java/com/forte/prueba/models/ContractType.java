@@ -1,19 +1,27 @@
 package com.forte.prueba.models;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "ContractType")
-@Data
+@Setter
+@Getter
 public class ContractType extends CommonEntity {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "ContractTypeId",
+            nullable = false,
+            unique = true)
     private int contractTypeId;
 
+    @Column(name = "Name",
+            nullable = false,
+            length = 80)
     private String name;
 
+    @Column(name = "Description")
     private String description;
 }
