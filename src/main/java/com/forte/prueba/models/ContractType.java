@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "ContractType")
 @Data
-public class ContractType {
+public class ContractType extends CommonEntity {
     @Id
     private int contractTypeId;
 
